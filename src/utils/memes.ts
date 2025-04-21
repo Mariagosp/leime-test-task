@@ -1,0 +1,72 @@
+export const memes = [
+  {
+    id: 1,
+    title: "Hide the Pain Harold",
+    image: "https://i.imgflip.com/2fm6x.jpg",
+    likes: 21,
+    url: "https://knowyourmeme.com/memes/hide-the-pain-harold",
+  },
+  {
+    id: 2,
+    title: "Epic Handshake",
+    image: "https://i.imgflip.com/1w7ygt.jpg",
+    likes: 29,
+    url: "https://knowyourmeme.com/memes/epic-handshake",
+  },
+  {
+    id: 3,
+    title: "Blank Nut Button",
+    image: "https://i.imgflip.com/1yxkcp.jpg",
+    likes: 17,
+    url: "https://knowyourmeme.com/memes/nut-button",
+  },
+  {
+    id: 4,
+    title: "Monkey Puppet",
+    image: "https://i.imgflip.com/2gnnjh.jpg",
+    likes: 36,
+    url: "https://knowyourmeme.com/memes/monkey-puppet",
+  },
+  {
+    id: 5,
+    title: "Two Buttons",
+    image: "https://i.imgflip.com/1g8my4.jpg",
+    likes: 41,
+    url: "https://knowyourmeme.com/memes/two-buttons",
+  },
+  {
+    id: 6,
+    title: "Boardroom Meeting Suggestion",
+    image: "https://i.imgflip.com/m78d.jpg",
+    likes: 23,
+    url: "https://knowyourmeme.com/memes/boardroom-meeting-suggestion",
+  },
+  {
+    id: 7,
+    title: "Unsettled Tom",
+    image: "https://i.imgflip.com/2wifvo.jpg",
+    likes: 34,
+    url: "https://knowyourmeme.com/memes/unsettled-tom",
+  },
+  {
+    id: 8,
+    title: "Waiting Skeleton",
+    image: "https://i.imgflip.com/2fm6x.jpg",
+    likes: 27,
+    url: "https://knowyourmeme.com/memes/skeleton-waiting",
+  },
+  {
+    id: 9,
+    title: "Spiderman Pointing at Spiderman",
+    image: "https://i.imgflip.com/3i7p.jpg",
+    likes: 49,
+    url: "https://knowyourmeme.com/memes/spiderman-pointing-at-spiderman",
+  },
+  {
+    id: 10,
+    title: "Disaster Girl",
+    image: "https://i.imgflip.com/23ls.jpg",
+    likes: 31,
+    url: "https://knowyourmeme.com/memes/disaster-girl",
+  }
+];
