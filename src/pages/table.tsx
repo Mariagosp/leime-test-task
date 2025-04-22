@@ -1,5 +1,5 @@
 import DefaultLayout from "@/layouts/default";
-import { title } from "@/components/primitives";
+import { title } from "@/components/shared/primitives";
 
 import {
   Table,
@@ -13,7 +13,7 @@ import { Button } from "@heroui/button";
 
 import { memes } from "../utils/memes";
 import { useDisclosure } from "@heroui/modal";
-import { ModalWindow } from "@/components/modal";
+import { ModalWindow } from "@/components/widgets/modal";
 import { Meme } from "@/types/Meme";
 import { useEffect, useState } from "react";
 import { getStoredMemes, saveMemes } from "@/utils/storage";
@@ -35,7 +35,6 @@ export default function TablePage() {
     );
     setMemesList(newMemes);
     saveMemes(newMemes);
-    // setMemesList(prev => prev.map(meme => meme.id === updatedMeme.id ? updatedMeme : meme));
   };
 
   useEffect(() => {

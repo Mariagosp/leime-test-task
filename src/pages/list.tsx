@@ -1,6 +1,6 @@
 import DefaultLayout from "@/layouts/default";
-import { title } from "@/components/primitives";
-import { MemeCard } from "@/components/memeCard";
+import { title } from "@/components/shared/primitives";
+import { MemeCard } from "@/components/features/memeCard";
 import { getStoredMemes } from "@/utils/storage";
 
 export default function ListPage() {

@@ -12,7 +12,7 @@ import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
+import { ThemeSwitch } from "@/components/theme/theme-switch";
 
 export const Navbar = () => {
   return (

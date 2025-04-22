@@ -1,3 +1,4 @@
+import { useFormData } from "@/hooks/useFormData";
 import { Meme } from "@/types/Meme";
 import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
@@ -8,7 +9,6 @@ import {
   ModalBody,
   ModalFooter,
 } from "@heroui/modal";
-import { useEffect, useState } from "react";
 
 type Props = {
   meme: Meme | null;
@@ -23,40 +23,12 @@ export const ModalWindow: React.FC<Props> = ({
   meme,
   onOpenChange,
 }) => {
-  const [formData, setFormData] = useState<Meme | null>(meme);
+  if (!meme) {
+    return;
+  }
 
-  useEffect(() => {
-    if (formData) {
-      setFormData(meme);
-    }
-  }, [meme]);
-
-  const handleFormDataChange = (field: keyof Meme, value: string | number) => {
-    setFormData((prevFormData) => {
-      if (prevFormData) {
-        return { ...prevFormData, [field]: value };
-      }
-      return prevFormData;
-    });
-  };
-
-  const isTitleInvalid = () => {
-    if (formData?.title) {
-      return formData?.title.length < 3 || formData?.title.length > 100;
-    }
-  };
-
-  const isFormValid = () => {
-    if (formData) {
-      return (
-        formData.title.trim().length >= 3 &&
-        formData.title.trim().length <= 100 &&
-        /^https?:\/\/.+\.jpg$/.test(formData.image) &&
-        formData.likes >= 0 &&
-        formData.likes <= 99
-      );
-    }
-  };
+  const { formData, handleFormDataChange, isTitleInvalid, isFormValid } =
+    useFormData(meme);
 
   return (
     <>
@@ -68,11 +40,7 @@ export const ModalWindow: React.FC<Props> = ({
                 {"Modal Title " + meme?.title}
               </ModalHeader>
               <ModalBody>
-                <Input
-                  label="ID"
-                  value={formData?.id.toString()}
-                  isReadOnly
-                />
+                <Input label="ID" value={formData?.id.toString()} isReadOnly />
                 <Input
                   label="Title"
                   value={formData?.title}

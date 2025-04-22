@@ -4,7 +4,8 @@ import { SwitchProps, useSwitch } from "@heroui/switch";
 import clsx from "clsx";
 import { useTheme } from "@heroui/use-theme";
 
-import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
+import { SunFilledIcon, MoonFilledIcon } from "@/components/icons/icons";
+import { ThemeType } from "@/types/theme";
 
 export interface ThemeSwitchProps {
   className?: string;
@@ -27,8 +28,8 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     getInputProps,
     getWrapperProps,
   } = useSwitch({
-    isSelected: theme === "light",
-    onChange: () => setTheme(theme === "light" ? "dark" : "light"),
+    isSelected: theme === ThemeType.LIGHT,
+    onChange: () => setTheme(theme === ThemeType.LIGHT ? ThemeType.DARK : ThemeType.LIGHT),
   });
 
   useEffect(() => {
