@@ -1,4 +1,4 @@
-import { title } from "@/components/primitives";
+import { title } from "@/components/shared/primitives";
 import DefaultLayout from "@/layouts/default";
 
 export const NotFoundPage = () => {
