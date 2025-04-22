@@ -69,6 +69,11 @@ export const ModalWindow: React.FC<Props> = ({
               </ModalHeader>
               <ModalBody>
                 <Input
+                  label="ID"
+                  value={formData?.id.toString()}
+                  isReadOnly
+                />
+                <Input
                   label="Title"
                   value={formData?.title}
                   onChange={(e) =>
@@ -104,12 +109,16 @@ export const ModalWindow: React.FC<Props> = ({
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button isDisabled={!isFormValid()} color="primary" onPress={() => {
-                  if (formData && isFormValid()) {
-                    handleSave(formData);
-                    onClose();
-                  }
-                }}>
+                <Button
+                  isDisabled={!isFormValid()}
+                  color="primary"
+                  onPress={() => {
+                    if (formData && isFormValid()) {
+                      handleSave(formData);
+                      onClose();
+                    }
+                  }}
+                >
                   Action
                 </Button>
               </ModalFooter>

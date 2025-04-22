@@ -1,50 +1,70 @@
-# Vite & HeroUI Template
+# Meme Directory 📸
 
-This is a template for creating applications using Vite and HeroUI (v2).
+Цей проєкт — це довідник мемів, створений на React з використанням бібліотеки [HeroUI](https://www.heroui.com), задеплоєний на [Railway](https://railway.com).
 
-[Try it on CodeSandbox](https://githubbox.com/frontio-ai/vite-template)
+## 🔗 Live Demo
 
-## Technologies Used
+[Відкрити додаток]( leime-test-task-production-6fae.up.railway.app)
 
-- [Vite](https://vitejs.dev/guide/)
-- [HeroUI](https://heroui.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Framer Motion](https://www.framer.com/motion)
+---
 
-## How to Use
+## 📦 Технології
 
-To clone the project, run the following command:
+- **React 18+**
+- **HeroUI**
+- **TypeScript**
+- **Tailwind CSS**
+- **Railway (Deployment)**
+- **LocalStorage** для збереження мемів
 
-```bash
-git clone https://github.com/frontio-ai/vite-template.git
-```
+---
 
-### Install dependencies
+## 📋 Функціонал
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+### ✅ Загальні вимоги:
+- Реалізовано 2 статичні сторінки:
+  - Таблиця мемів
+  - Список мемів
+- Перемикання між сторінками — через `HeroUI Navbar`
+- Дані про меми зберігаються у `localStorage`
+- Валідація полів при редагуванні
+- Адаптивність: працює на мобільних, Windows, macOS
+- Бекенд відсутній (тільки UI)
 
-```bash
-npm install
-```
+---
 
-### Run the development server
+### 📄 Сторінка 1: Таблиця мемів
 
-```bash
-npm run dev
-```
+- Вивід мемів у вигляді `HeroUI Table`
+- Одна колонка: таблиця з властивостями кожного мема
+- Колонка `Actions` — кнопка `Edit` для відкриття модального вікна
+- Модальне вікно (`HeroUI Modal`) містить форму редагування:
+  - `Id` (read-only)
+  - `Назва` — 3-100 символів, обов’язкове
+  - `Зображення` — повний URL до `.jpg`, обов’язкове
+  - `Кількість лайків` — від 0 до 99, обов’язкове
 
-### Setup pnpm (optional)
+---
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+### 📃 Сторінка 2: Список мемів
 
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
+- 4-колонкова сітка
+- Мем відображається як `HeroUI Card`:
+  - `HeroUI Image`
+  - Назва (заголовок)
+  - Лайки
+  - Клікабельне посилання
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+---
 
-## License
+## 🚀 Деплой на Railway
 
-Licensed under the [MIT license](https://github.com/frontio-ai/vite-template/blob/main/LICENSE).
+1. Створено акаунт на [https://railway.com](https://railway.com)
+2. Проєкт підключено до GitHub
+3. Сервіс відкритий для публічного доступу через домен
+
+---
+
+## 📸 Приклад мемів
+
+Додаток містить 10 мемів, які можна редагувати, переглядати, та лайкати. Усі дані зберігаються локально (в localStorage).
