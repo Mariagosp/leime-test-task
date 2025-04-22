@@ -4,7 +4,7 @@
 
 ## 🔗 Live Demo
 
-[Відкрити додаток](leime-test-task-production-6fae.up.railway.app)
+[Відкрити додаток](https://leime-test-task-production-6fae.up.railway.app)
 
 ---
 
